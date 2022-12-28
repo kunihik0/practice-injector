@@ -11,6 +11,8 @@ python = "^3.9"
 injector = "^0.20.1"
 pydantic = "^1.10.2"
 mecab-python3 = "^1.0.6"
+sudachipy = "^0.6.6"
+sudachidict-core = "^20221021"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
@@ -37,7 +39,8 @@ target-version = ['py39', 'py310']
 [[tool.mypy.overrides]]
 module = [
     "src.*",
-    "MeCab"
+    "MeCab",
+    "sudachipy"
 ]
 ignore_missing_imports = true
 

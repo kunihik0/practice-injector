@@ -307,6 +307,28 @@ setproctitle = ["setproctitle"]
 testing = ["filelock"]
 
 [[package]]
+name = "sudachidict-core"
+version = "20221021"
+description = "Sudachi Dictionary for SudachiPy - Core Edition"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+SudachiPy = ">=0.5,<0.7"
+
+[[package]]
+name = "sudachipy"
+version = "0.6.6"
+description = "Python version of Sudachi, the Japanese Morphological Analyzer"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+tests = ["sudachidict-core", "tokenizers"]
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -325,7 +347,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "a2a16e77f193ef2fcd771a2d678f0cd105209d5f3a63ebefcf673147fcd67e6a"
+content-hash = "aa78528f6d5aeca1f8ee2c136103c05ec4b4b8fdb991f98a081fadcc3e1d4a8d"
 
 [metadata.files]
 attrs = [
@@ -569,6 +591,24 @@ pytest-cov = [
 pytest-xdist = [
     {file = "pytest-xdist-3.1.0.tar.gz", hash = "sha256:40fdb8f3544921c5dfcd486ac080ce22870e71d82ced6d2e78fa97c2addd480c"},
     {file = "pytest_xdist-3.1.0-py3-none-any.whl", hash = "sha256:70a76f191d8a1d2d6be69fc440cdf85f3e4c03c08b520fd5dc5d338d6cf07d89"},
+]
+sudachidict-core = [
+    {file = "SudachiDict-core-20221021.tar.gz", hash = "sha256:30eaede52d446204d87b8f9e9873759a82d2b7b66d8b7511d56aeec4ecf91e2e"},
+]
+sudachipy = [
+    {file = "SudachiPy-0.6.6-cp310-cp310-macosx_10_12_universal2.whl", hash = "sha256:368ccd29af99a8953f38e47a7ad9998de7259c98796e79ddbf62b635f1bfcea1"},
+    {file = "SudachiPy-0.6.6-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e886a54ed4d0ee3480baed6aa436e62491a8c6ec68b8ee4197e7b2c26485d2ed"},
+    {file = "SudachiPy-0.6.6-cp310-cp310-win_amd64.whl", hash = "sha256:4f0df5b8fe46952ee6104593831a9d86ecb7a50a506d361205197845b43564eb"},
+    {file = "SudachiPy-0.6.6-cp37-cp37m-macosx_10_12_universal2.whl", hash = "sha256:22de4c664df408a2ab9f2931f0f9ba896a3c31bc914e1d92505cf7abc649ec16"},
+    {file = "SudachiPy-0.6.6-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:00001529148d1d4a243497930da178ca0336563a164abbca915e29097faf2434"},
+    {file = "SudachiPy-0.6.6-cp37-cp37m-win_amd64.whl", hash = "sha256:f0b272aa517e6cf24624d359382a81f34bc7503443c482509b517e3cae0c40d7"},
+    {file = "SudachiPy-0.6.6-cp38-cp38-macosx_10_12_universal2.whl", hash = "sha256:9ca0dfde031c6371ca0c4ab22b30d24bf3c5073ef1fc4290c4ab967356c43c35"},
+    {file = "SudachiPy-0.6.6-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:189a7ba740664b6a09a31b8b3b69f086237f63b9890caf8f497186a85e3750b6"},
+    {file = "SudachiPy-0.6.6-cp38-cp38-win_amd64.whl", hash = "sha256:210b1dbd1a9f736a316b319948d29c0d858d4f5567f699ae07ea7111b13f84cb"},
+    {file = "SudachiPy-0.6.6-cp39-cp39-macosx_10_12_universal2.whl", hash = "sha256:89db02123eb8bb652cfaa2c0a2ead812fde0d8113d53f89ec2ae4aa6d7fce6c5"},
+    {file = "SudachiPy-0.6.6-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:2cc849e20ff1994a3acf2c91f0d81ff56ce0f99d6cf073bcf2538ce07923f5e2"},
+    {file = "SudachiPy-0.6.6-cp39-cp39-win_amd64.whl", hash = "sha256:f11075d850ac20dfab872f688ffa0de381c42289bbfcbd9dba6e52d80d308d9f"},
+    {file = "SudachiPy-0.6.6.tar.gz", hash = "sha256:5e9f719c68cf57a4e4854a51fe0a2f4b343299464aeb680c968c9e34b017aef4"},
 ]
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},

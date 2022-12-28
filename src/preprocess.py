@@ -12,7 +12,7 @@ class TokenizerInterface(ABC):
 
 class MecabTokenizer(TokenizerInterface):
     def __init__(self) -> None:
-        self.mecab = MeCab.Tagger()
+        self.mecab = MeCab.Tagger("-Owakati")
 
     def tokenize(self, text: str) -> str:
         return self.mecab.parse(text)

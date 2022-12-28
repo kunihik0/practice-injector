@@ -1,6 +1,6 @@
 import json
 from abc import ABC, abstractmethod
-from typing import Any, Dict, List
+from typing import Dict, List
 
 from pydantic import BaseModel, Field
 
@@ -17,7 +17,7 @@ class DataBaseInterface(ABC):
     def get(self, path: str) -> List[Data]:
         ...
 
-    def save(self, data: List[Dict[str, Any]], path: str) -> None:
+    def save(self, data: List[Dict[str, str]], path: str) -> None:
         ...
 
 
@@ -26,5 +26,5 @@ class DataBase(DataBaseInterface):
         json_data = json.load(open(path))
         return [Data(**data) for data in json_data]
 
-    def save(self, data: List[Dict[str, Any]], path: str) -> None:
+    def save(self, data: List[Dict[str, str]], path: str) -> None:
         json.dump(data, open(path, "w"), ensure_ascii=False, indent=4)

@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import Dict, List
 
 from injector import inject
 
@@ -11,6 +12,10 @@ class UseCaseInterface(ABC):
     def execute(self, data_path: str, save_path: str) -> None:
         ...
 
+    @abstractmethod
+    def preprocess(self, data_path: str) -> List[Dict[str, str]]:
+        ...
+
 
 class UseCase(object):
     @inject
@@ -19,6 +24,10 @@ class UseCase(object):
         self.db = db
 
     def execute(self, data_path: str, save_path: str) -> None:
+        save_data = self.preprocess(data_path)
+        self.db.save(save_data, save_path)
+
+    def preprocess(self, data_path: str) -> List[Dict[str, str]]:
         data_list = self.db.get(data_path)
 
         save_data = []
@@ -31,4 +40,4 @@ class UseCase(object):
                     "好きな食べ物": self.tokenizer.tokenize(data.favorite_food),
                 }
             )
-        self.db.save(save_data, save_path)
+        return save_data

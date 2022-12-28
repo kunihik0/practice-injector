@@ -4,7 +4,7 @@ from typing import Dict, List
 from injector import inject
 
 from src.db import DataBaseInterface
-from src.preprocess import TokenizerInterface
+from src.tokenizer import TokenizerInterface
 
 
 class UseCaseInterface(ABC):

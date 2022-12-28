@@ -1,7 +1,7 @@
 from injector import Binder, Injector
 
 from src.db import DataBase, DataBaseInterface
-from src.preprocess import MecabTokenizer, TokenizerInterface
+from src.tokenizer import MecabTokenizer, TokenizerInterface
 from src.usecase import UseCase, UseCaseInterface
 
 

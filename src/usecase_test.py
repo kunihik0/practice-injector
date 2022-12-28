@@ -3,7 +3,7 @@ from unittest.mock import Mock
 
 from src.db import Data, DataBaseInterface
 from src.di import injector
-from src.preprocess import TokenizerInterface
+from src.tokenizer import TokenizerInterface
 from src.usecase import UseCase
 
 
